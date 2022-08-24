@@ -1,6 +1,6 @@
 name: password_stepper
-description: Flutter Password stepper
-version: 0.0.1
+description: Flutter Password stepper. This package allows you to draw password stepper with Flutter.
+version: 0.0.2
 homepage: https://github.com/team7s/password_stepper
 
 environment:

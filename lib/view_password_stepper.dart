@@ -62,15 +62,18 @@ class ViewPasswordStepper extends StatelessWidget {
               width: 47,
               height: 4,
               margin: const EdgeInsets.only(right: 18),
-              decoration:
-                  BoxDecoration(color: getStatusColor(), borderRadius: BorderRadius.circular(2)),
+              decoration: BoxDecoration(
+                  color: getStatusColor(),
+                  borderRadius: BorderRadius.circular(2)),
             ),
             Container(
               width: 47,
               height: 4,
               margin: const EdgeInsets.only(right: 18),
               decoration: BoxDecoration(
-                  color: getStatusNo() == 1 ? colorUnSelect ?? Colors.grey : getStatusColor(),
+                  color: getStatusNo() == 1
+                      ? colorUnSelect ?? Colors.grey
+                      : getStatusColor(),
                   borderRadius: BorderRadius.circular(2)),
             ),
             Container(
@@ -92,7 +95,10 @@ class ViewPasswordStepper extends StatelessWidget {
                       color: getStatusColor(),
                       fontFamily: textStyle!.fontFamily ?? 'robot',
                       fontWeight: textStyle!.fontWeight ?? FontWeight.bold)
-                  : TextStyle(fontSize: 13, color: getStatusColor(), fontWeight: FontWeight.bold),
+                  : TextStyle(
+                      fontSize: 13,
+                      color: getStatusColor(),
+                      fontWeight: FontWeight.bold),
               textAlign: TextAlign.end,
             )),
             const SizedBox(
@@ -147,7 +153,8 @@ class ViewPasswordStepper extends StatelessWidget {
     } else if (passwordText!.length < 8) {
       return 2 / 4;
     } else {
-      if (!letterReg.hasMatch(passwordText!) || !numReg.hasMatch(passwordText!)) {
+      if (!letterReg.hasMatch(passwordText!) ||
+          !numReg.hasMatch(passwordText!)) {
         return 3 / 4;
       } else {
         return 1;
